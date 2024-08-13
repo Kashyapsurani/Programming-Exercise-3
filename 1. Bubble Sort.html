@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+
+<body>
+
+
+    <script>
+        function bubbleShort(array) {
+            var n = array.length
+
+            for (var i = 0; i < n - 1; i++) {
+                var swip = false;
+                
+                for (var a = 0; a < n - i - 1; a++) {
+                    if (array[a] > array[a + 1]) {
+                        var tem = array[a]
+                        array[a] = array[a + 1]
+                        array[a + 1] = tem
+
+                        swip = true
+                    }
+                }
+
+                if (!swip) {
+                    break;
+                }
+            }
+            return array
+        }
+
+        var reselt = bubbleShort([2, 3, 1, 8, 7, 10])
+        console.log(reselt)
+
+    </script>
+</body>
+
+</html>

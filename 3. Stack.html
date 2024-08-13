@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+
+<body>
+
+
+    <script>
+        var data = [];
+
+        var currunzise = data.length;
+        var max = 5
+
+        function push(naeValue) {
+            if (currunzise >= max) {
+                alert(`Stack If Full Your Limet Is ${max} You Cant Add Mor`)
+            }
+
+            data[currunzise] = naeValue
+            currunzise += 1
+
+            return data
+        }
+
+        push(20);
+        push(10);
+        push(30);
+        push(40);
+        push(55);
+
+
+        function pop(params) {
+            if (currunzise < 0) {
+                alert(`Stack If Empty`)
+            } else {
+                currunzise -= 1
+                data.length = currunzise
+            }
+
+            return data
+        }
+
+        pop()
+        pop()
+
+        console.log(data)
+
+
+    </script>
+</body>
+
+</html>
